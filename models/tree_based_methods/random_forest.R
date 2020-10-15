@@ -4,9 +4,9 @@
 # This script applies random forest to the preprocessed dataset.
 
 # Random forest training.
-random_forest <- train(factor(y1)~., data=trainset, trControl=trainControl(method="cv", 
+random_forest <- train(factor(y1) ~ ., data = trainset, trControl = trainControl(method = "cv", 
                        number = 10,
-                       classProbs =  TRUE), 
+                       classProbs = TRUE), 
                        metric = "Kappa",
                        method = "rf")
 
