@@ -5,10 +5,10 @@
 
 # Bagged trees training.
 bagged_trees <- train(factor(y1)~., data=trainset, trControl=trainControl(method="cv", 
-                       number = 10,
-                       classProbs =  TRUE), 
-                       metric = "Kappa",
-                       method = "treebag")
+                      number = 10,
+                      classProbs =  TRUE), 
+                      metric = "Kappa",
+                      method = "treebag")
 
 # Bagged trees testing.
 y1_hat <- predict(bagged_trees, as.data.frame(testset)[-30])
