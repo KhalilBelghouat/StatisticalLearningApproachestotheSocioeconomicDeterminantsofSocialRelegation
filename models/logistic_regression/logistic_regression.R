@@ -6,7 +6,7 @@
 # Transforming the data columns into factors.
 fct_dataset <- as.data.frame(lapply(dataset, as.factor))
 
-# Splitting the data into a training and testing set.
+# Splitting the data into a tarining and testing set.
 trainset <- fct_dataset[1:1300,]
 testset <- fct_dataset[1301:1621,]
 
