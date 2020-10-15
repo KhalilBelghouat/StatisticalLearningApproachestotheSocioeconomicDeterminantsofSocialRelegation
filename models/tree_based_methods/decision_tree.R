@@ -11,5 +11,5 @@ decision_tree <- train(factor(y1)~., data=trainset, trControl=trainControl(metho
                        method = "rpart")
 
 # Decision tree testing.
-y_pred <- predict(decision_tree, as.data.frame(testset)[-30])
-confusionMatrix(y_pred, as.factor(as.data.frame(testset)$y1))
+y1_hat <- predict(decision_tree, as.data.frame(testset)[-30])
+confusionMatrix(y1_hat, as.factor(as.data.frame(testset)$y1))
