@@ -4,7 +4,7 @@
 # This script applies the decision tree algorithm to the preprocessed dataset.
 
 # Decision tree training.
-decision_tree <- train(factor(y1)~., data=trainset, trControl=trainControl(method="cv", 
+decision_tree <- train(factor(y1) ~ ., data = trainset, trControl = trainControl(method = "cv", 
                        number = 10,
                        classProbs = TRUE), 
                        metric = "Kappa",
