@@ -36,7 +36,7 @@ dataset$Francais[is.na(dataset$Francais)] <- as.numeric(mode(dataset["Francais"]
 
 # All column variables are encoded as integers.
 # We encode the categorical variables with k > 2 levels as factors.
-# fct — i.e., factors — is R's way of differentiating categorical from numerical variables.
+# fct — i.e., factor — is R's way of differentiating categorical from numerical variables.
 
 # We select the columns of concern and apply the transformation.
 colnames <- c('Prof_P', 'Edu_P', 'Ed_M', 'Taille_Frat', 'Francais', 'Age_Tranches')
