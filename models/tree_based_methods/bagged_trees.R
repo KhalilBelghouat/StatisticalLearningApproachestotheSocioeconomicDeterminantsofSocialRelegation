@@ -4,7 +4,7 @@
 # This script applies bagged trees to the preprocessed dataset.
 
 # Bagged trees training.
-bagged_trees <- train(factor(y1)~., data=trainset, trControl=trainControl(method="cv", 
+bagged_trees <- train(factor(y1) ~ ., data = trainset, trControl = trainControl(method = "cv", 
                       number = 10,
                       classProbs =  TRUE), 
                       metric = "Kappa",
