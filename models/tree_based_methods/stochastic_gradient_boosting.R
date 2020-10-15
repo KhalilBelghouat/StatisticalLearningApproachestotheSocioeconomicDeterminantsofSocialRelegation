@@ -4,7 +4,7 @@
 # This script applies stochastic gradient boosting to the preprocessed dataset.
 
 # Stochastic gradient boosting training.
-stochastic_gradient_boosting <- train(factor(y1) ~ ., data = trainset, trControl = trainControl(method = "cv", 
+stochastic_gradient_boosting <- train(y1 ~ ., data = trainset, trControl = trainControl(method = "cv", 
                                     number = 10,
                                     classProbs = TRUE), 
                                     metric = "Kappa",
