@@ -1,7 +1,9 @@
 # SUPPLEMENTARY CODE FOR THE BACHELOR THESIS: 
 # Statistical Learning Approaches to the Socioeconomic Determinants of Social Relegation
 
-# Installing all R packages required to reproduce the results.
+# This script installs and loads all R packages required to reproduce the results.
+
+# Installing R packages.
 install.packages('randomForest')
 install.packages('caret')
 install.packages('glmnet')
@@ -16,15 +18,15 @@ install.packages('gbm')
 install.packages('RSNNS')
 
 # Loading the installed R packages.
-library(RSNNS)
-library(gbm)
-library(e1071)
-library(nnet)
-library(NeuralNetTools)
-library(xgboost)
-library(fastshap)
-library(glmnet)
 library(randomForest)
 library(caret)
-library(kernlab)
+library(glmnet)
 library(vip)
+library(kernlab)
+library(fastshap)
+library(xgboost)
+library(NeuralNetTools)
+library(nnet)
+library(e1071)
+library(gbm)
+library(RSNNS)
