@@ -63,3 +63,7 @@ rows <- sample(nrow(dummy_dataset))
 dummy_dataset <- dummy_dataset[rows, ]
 dummy_dataset$y1 <- revalue(factor(dummy_dataset$y1), c("0"="non", "1"="oui"))
 head(dummy_dataset)
+
+# Splitting the data into a tarining and testing set.
+trainset <- dummy_dataset[1:1300,]
+testset <- dummy_dataset[1301:1621,]
