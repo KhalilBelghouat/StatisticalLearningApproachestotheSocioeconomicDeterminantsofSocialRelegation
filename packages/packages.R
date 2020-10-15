@@ -2,7 +2,6 @@
 # Statistical Learning Approaches to the Socioeconomic Determinants of Social Relegation
 
 # Installing all R packages required to reproduce the results.
-
 install.packages('randomForest')
 install.packages('caret')
 install.packages('glmnet')
@@ -17,7 +16,6 @@ install.packages('gbm')
 install.packages('RSNNS')
 
 # Loading the installed R packages.
-
 library(RSNNS)
 library(gbm)
 library(e1071)
