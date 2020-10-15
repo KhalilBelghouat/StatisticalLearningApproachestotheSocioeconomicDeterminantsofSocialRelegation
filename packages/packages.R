@@ -16,6 +16,8 @@ install.packages('nnet')
 install.packages('e1071')
 install.packages('gbm')
 install.packages('RSNNS')
+install.packages('RSNNS')
+install.packages('plyr')
 
 # Loading the installed R packages.
 library(randomForest)
@@ -30,3 +32,4 @@ library(nnet)
 library(e1071)
 library(gbm)
 library(RSNNS)
+library(plyr)
