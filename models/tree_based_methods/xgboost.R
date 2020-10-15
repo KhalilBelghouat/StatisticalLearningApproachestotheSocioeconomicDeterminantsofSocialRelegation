@@ -4,9 +4,9 @@
 # This script applies the xgboost algorithm to the preprocessed dataset.
 
 # Xgboost training.
-xgboost <- train(factor(y1)~., data=trainset, trControl=trainControl(method="cv", 
+xgboost <- train(factor(y1) ~ ., data = trainset, trControl = trainControl(method = "cv", 
                  number = 10,
-                 classProbs =  TRUE), 
+                 classProbs = TRUE), 
                  metric = "Kappa",
                  method = "xgbTree")
 
