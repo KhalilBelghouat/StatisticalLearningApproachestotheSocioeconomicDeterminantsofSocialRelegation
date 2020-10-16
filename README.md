@@ -20,7 +20,9 @@ The data, containing information about the personal, educational, and profession
 
 ### Data Preprocessing
 
-The
+The data contains 22 exogenous variables and 2 endogenous variables. Our study aims, through statistical learning approaches, to identify, amongst the 17 selected exogenous variables, the socioeconomic drivers of our machine learning models and quantify their influence on the target variable of interest, namely, social exclusion.
+
+The ```R``` script _preprocessing.R_ in the _preprocessing_ folder passes the social relegation dataset through important data preprocessing steps.
 
 ### Model Estimation and Prediction
 
