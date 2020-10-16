@@ -1,15 +1,19 @@
 # SUPPLEMENTARY CODE FOR THE BACHELOR THESIS: 
 # Statistical Learning Approaches to the Socioeconomic Determinants of Social Relegation
 
-# This script applies bagged trees to the preprocessed dataset.
+# This script utilizes SHAP (SHapley Additive exPlanations) to explain the output of the support vector machine with radial basis kernel.
 
-# Bagged trees training.
-bagged_trees <- train(y1 ~ ., data = trainset, trControl = trainControl(method = "cv", 
-                      number = 10,
-                      classProbs = TRUE), 
-                      metric = "Kappa",
-                      method = "treebag")
+# Specifying the independent variable columns.
+features <- trainset[-30]
 
-# Bagged trees testing.
-y1_hat <- predict(bagged_trees, as.data.frame(testset)[-30])
-confusionMatrix(y1_hat, as.factor(as.data.frame(testset)$y1))
+# Prediction function.
+prediction <- function(object, newdata){
+          results <- as.vector(predict(object, newdata, type = "prob"))
+          return(results$oui)
+}
+
+# Shapley values.
+shap <- explain(svm_rbf, X = features, nsim = 100, pred_wrapper = prediction)
+
+# Mean(|Shapley|).
+variable_importance <- autoplot(shap) + theme_bw()
