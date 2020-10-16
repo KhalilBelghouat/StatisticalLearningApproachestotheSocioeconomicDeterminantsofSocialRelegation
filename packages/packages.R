@@ -18,6 +18,7 @@ install.packages('gbm')
 install.packages('RSNNS')
 install.packages('RSNNS')
 install.packages('plyr')
+install.packages('ggplot2')
 
 # Loading the installed R packages.
 library(randomForest)
@@ -33,3 +34,4 @@ library(e1071)
 library(gbm)
 library(RSNNS)
 library(plyr)
+library(ggplot2)
