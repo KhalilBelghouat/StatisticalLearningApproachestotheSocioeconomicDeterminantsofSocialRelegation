@@ -26,5 +26,5 @@ All operations, from data preprocessing to model estimation, were carried out on
 
 
 
-### Variable Impotance
+### Variable Importance
 
