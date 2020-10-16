@@ -26,7 +26,7 @@ The ```R``` script _preprocessing.R_ in the _preprocessing_ folder passes the so
 
 ### Model Estimation and Prediction
 
-
+All models are estimated on a training set constituting approximately 80% of the data using k-fold cross-validation. The trained models were then tested on the remaining 20% of the data.
 
 ### Feature Importance
 
