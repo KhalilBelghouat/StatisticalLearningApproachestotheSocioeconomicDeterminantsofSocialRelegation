@@ -6,7 +6,9 @@ In this thesis, we apply 12 supervised learning methods on a social exclusion an
 
 ## Prerequisites
 
-The ```R``` programming language, version 4.0.3, and its statistical and machine learning libraries were used to build all applied algorithms. The ```R``` script _packages.R_ in the _packages_ folder installs and loads all necessary ```R``` packages. All operations, from data preprocessing to model estimation, were carried out on the Google Colaboratory platform.
+The ```R``` programming language, version 4.0.3, and its statistical and machine learning libraries were used to build all applied algorithms. The ```R``` script _packages.R_ in the _packages_ folder installs and loads all necessary ```R``` packages. 
+
+All operations, from data preprocessing to model estimation, were carried out on the Google Colaboratory platform.
 
 ## Code Structure
 
