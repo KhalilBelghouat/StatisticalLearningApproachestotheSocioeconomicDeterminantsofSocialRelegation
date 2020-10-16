@@ -32,3 +32,4 @@ The ```R``` scripts in the _models_ folder apply the models of interest on to th
 
 ### Feature Importance
 
+For any statistical analysis to be successful, the ability to interpret results and explain model outputs is crucial. For this, Shapley values were calculated for all machine learning methods except regression models for which the standard regression analysis procedure is followed to extract the variables most contributing to the models' predictions.
