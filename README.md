@@ -12,3 +12,19 @@ All operations, from data preprocessing to model estimation, were carried out on
 
 ## Code Structure
 
+
+
+### About The Data 
+
+
+
+### Data Preprocessing
+
+
+
+### Model Estimation and Prediction
+
+
+
+### Variable Impotance
+
