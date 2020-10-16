@@ -22,11 +22,13 @@ The data, containing information about the personal, educational, and profession
 
 The data contains 22 exogenous variables and 2 endogenous variables. Our study aims, through statistical learning approaches, to identify, amongst the 17 selected exogenous variables, the socioeconomic drivers of our machine learning models and quantify their influence on the target variable of interest, namely, social exclusion.
 
-The ```R``` script _preprocessing.R_ in the _preprocessing_ folder passes the social relegation dataset through important data preprocessing steps.
+The ```R``` scripts _preprocessing.R_ in the _preprocessing_ folder passes the social relegation dataset through important data preprocessing steps.
 
 ### Model Estimation and Prediction
 
-All models are estimated on a training set constituting approximately 80% of the data using k-fold cross-validation. The trained models were then tested on the remaining 20% of the data.
+All models are trained on a training set constituting approximately 80% of the data using k-fold cross-validation. The estimated models are then tested on the remaining 20%.
+
+The ```R``` scripts in the _models_ folder apply the models of interest on to the preprocessed dataset.
 
 ### Feature Importance
 
