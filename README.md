@@ -16,7 +16,7 @@ All operations, from data preprocessing to model estimation, were carried out on
 
 ### About The Data 
 
-
+The data, containing information about the personal, educational, and professional situation of 1,621 individuals, are organized in a table containing 17 columns and 1,621 rows. The first 16 columns represent exogenous variables such as age, level of education, marital status, etc., while the last column represents the social status of the concerned individual where 0 denotes his non-exclusion and 1 denotes his exclusion.
 
 ### Data Preprocessing
 
