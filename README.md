@@ -16,11 +16,11 @@ All operations, from data preprocessing to model estimation, were carried out on
 
 ### About The Data 
 
-The data, containing information about the personal, educational, and professional situation of 1,621 individuals, are organized in a table containing 24 columns and 1,621 rows. 22 out of the 24 columns represent exogenous variables such as age, level of education, marital status, etc., while the remaining columns represent the social status of the individuals subject to our study.
+The data, containing information about the personal, educational, and professional situation of 1,621 individuals, is organized in a table containing 24 columns and 1,621 rows. 22 out of the 24 columns represent exogenous variables such as age, level of education, marital status, etc., while the remaining columns represent the social status of the individuals subject to our study.
 
 ### Data Preprocessing
 
-
+The
 
 ### Model Estimation and Prediction
 
