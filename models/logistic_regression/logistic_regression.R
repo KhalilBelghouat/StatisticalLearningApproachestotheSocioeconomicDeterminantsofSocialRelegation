@@ -3,6 +3,8 @@
 
 # This script applies logistic regression to the preprocessed dataset.
 
+source('preprocessing.R')
+
 # Transforming the data columns into factors.
 fct_dataset <- as.data.frame(lapply(dataset, as.factor))
 
@@ -11,11 +13,11 @@ trainset <- fct_dataset[1:1300,]
 testset <- fct_dataset[1301:1621,]
 
 # Logistic regression training.
-logistic_regression <- train(y1 ~ ., data = trainset, trControl = trainControl(method = "cv", 
-                             number = 10),
-                             method = "glm",
-                             metric = "Kappa",
-                             family = "binomial")
+logistic_regression <- caret::train(y1 ~ ., data = trainset, trControl = trainControl(method = "cv", 
+                                    number = 10),
+                                    method = "glm",
+                                    metric = "Kappa",
+                                    family = "binomial")
 
 # Logistic regression testing.
 y1_hat <- predict(logistic_regression, as.data.frame(testset)[-30])
