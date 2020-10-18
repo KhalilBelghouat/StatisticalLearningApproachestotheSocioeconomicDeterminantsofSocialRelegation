@@ -3,6 +3,9 @@
 
 # This script utilizes SHAP (SHapley Additive exPlanations) to explain the output of the stochastic gradient boosting algorithm.
 
+source('preprocessing.R')
+source('stochastic_gradient_boosting.R')
+
 # Specifying the independent variable columns.
 features <- trainset[-30]
 
