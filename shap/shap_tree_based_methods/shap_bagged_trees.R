@@ -3,6 +3,9 @@
 
 # This script utilizes SHAP (SHapley Additive exPlanations) to explain the output of bagged trees.
 
+source('preprocessing.R')
+source('bagged_trees.R')
+
 # Specifying the independent variable columns.
 features <- trainset[-30]
 
