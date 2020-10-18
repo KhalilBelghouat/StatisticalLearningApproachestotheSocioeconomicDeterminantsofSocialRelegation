@@ -3,6 +3,9 @@
 
 # This script utilizes SHAP (SHapley Additive exPlanations) to explain the output of the support vector machine with polynomial kernel.
 
+source('preprocessing.R')
+source('polynomial_kernel.R')
+
 # Specifying the independent variable columns.
 features <- trainset[-30]
 
