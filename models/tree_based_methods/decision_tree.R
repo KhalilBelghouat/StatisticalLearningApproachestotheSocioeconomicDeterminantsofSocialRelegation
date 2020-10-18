@@ -3,12 +3,14 @@
 
 # This script applies the decision tree algorithm to the preprocessed dataset.
 
+source('preprocessing.R')
+
 # Decision tree training.
-decision_tree <- train(y1 ~ ., data = trainset, trControl = trainControl(method = "cv", 
-                       number = 10,
-                       classProbs = TRUE), 
-                       metric = "Kappa",
-                       method = "rpart")
+decision_tree <- caret::train(y1 ~ ., data = trainset, trControl = trainControl(method = "cv", 
+                              number = 10,
+                              classProbs = TRUE), 
+                              metric = "Kappa",
+                              method = "rpart")
 
 # Decision tree testing.
 y1_hat <- predict(decision_tree, as.data.frame(testset)[-30])
