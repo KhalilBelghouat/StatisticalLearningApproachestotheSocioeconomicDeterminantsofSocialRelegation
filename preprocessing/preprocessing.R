@@ -1,7 +1,7 @@
 # SUPPLEMENTARY CODE FOR THE BACHELOR THESIS: 
 # Statistical Learning Approaches to the Socioeconomic Determinants of Social Relegation
 
-# This script passes the social relegation data set through important data preprocessing steps.
+# This script passes the social relegation dataset through important data preprocessing steps.
 
 set.seed(10)
 
