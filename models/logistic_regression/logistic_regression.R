@@ -9,8 +9,8 @@ source('preprocessing.R')
 fct_dataset <- as.data.frame(lapply(dataset, as.factor))
 
 # Splitting the data into a tarining and testing set.
-trainset <- fct_dataset[1:1300,]
-testset <- fct_dataset[1301:1621,]
+trainset <- fct_dataset[1:1300, ]
+testset <- fct_dataset[1301:1621, ]
 
 # Logistic regression training.
 logistic_regression <- caret::train(y1 ~ ., data = trainset, trControl = trainControl(method = "cv", 
