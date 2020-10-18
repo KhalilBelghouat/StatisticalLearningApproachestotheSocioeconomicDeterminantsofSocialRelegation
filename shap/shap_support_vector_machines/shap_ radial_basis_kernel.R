@@ -3,6 +3,9 @@
 
 # This script utilizes SHAP (SHapley Additive exPlanations) to explain the output of the support vector machine with radial basis kernel.
 
+source('preprocessing.R')
+source('radial_basis_kernel.R')
+
 # Specifying the independent variable columns.
 features <- trainset[-30]
 
