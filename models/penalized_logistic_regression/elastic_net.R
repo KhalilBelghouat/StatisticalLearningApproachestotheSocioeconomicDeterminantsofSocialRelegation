@@ -3,21 +3,23 @@
 
 # This script applies elastic net logistic regression to the preprocessed dataset.
 
+source('preprocessing.R')
+
 # Transforming the data columns into factors.
 fct_dataset <- as.data.frame(lapply(dataset, as.factor))
 
 # Splitting the data into a tarining and testing set.
-trainset <- fct_dataset[1:1300,]
-testset <- fct_dataset[1301:1621,]
+trainset <- fct_dataset[1:1300, ]
+testset <- fct_dataset[1301:1621, ]
 
 # Elastic net logistic regression training.
-elastic_net <- train(y1 ~., data = trainset, trControl = trainControl(method = "cv", 
-                     number = 10),
-                     method = "glmnet",
-                     family = "binomial",
-                     metric = "Kappa",
-                     tuneGrid = expand.grid(alpha = seq(0.01, 0.99, by = 0.1),
-                     lambda = seq(0.01, 0.1, by = 0.001)))
+elastic_net <- caret::train(y1 ~ ., data = trainset, trControl = trainControl(method = "cv", 
+                            number = 10),
+                            method = "glmnet",
+                            family = "binomial",
+                            metric = "Kappa",
+                            tuneGrid = expand.grid(alpha = seq(0.01, 0.99, by = 0.1),
+                            lambda = seq(0.01, 0.1, by = 0.001)))
 
 # Elasyic_net logistic regression testing.
 y1_hat <- predict(elastic_net, as.data.frame(testset)[-30])
