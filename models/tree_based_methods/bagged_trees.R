@@ -3,12 +3,14 @@
 
 # This script applies bagged trees to the preprocessed dataset.
 
+source('preprocessing.R')
+
 # Bagged trees training.
-bagged_trees <- train(y1 ~ ., data = trainset, trControl = trainControl(method = "cv", 
-                      number = 10,
-                      classProbs = TRUE), 
-                      metric = "Kappa",
-                      method = "treebag")
+bagged_trees <- caret::train(y1 ~ ., data = trainset, trControl = trainControl(method = "cv", 
+                             number = 10,
+                             classProbs = TRUE), 
+                             metric = "Kappa",
+                             method = "treebag")
 
 # Bagged trees testing.
 y1_hat <- predict(bagged_trees, as.data.frame(testset)[-30])
