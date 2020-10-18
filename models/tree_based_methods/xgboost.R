@@ -3,12 +3,14 @@
 
 # This script applies the XGBoost algorithm to the preprocessed dataset.
 
+source('preprocessing.R')
+
 # XGBoost training.
-XGBoost <- train(y1 ~ ., data = trainset, trControl = trainControl(method = "cv", 
-                 number = 10,
-                 classProbs = TRUE), 
-                 metric = "Kappa",
-                 method = "xgbTree")
+XGBoost <- caret::train(y1 ~ ., data = trainset, trControl = trainControl(method = "cv", 
+                        number = 10,
+                        classProbs = TRUE), 
+                        metric = "Kappa",
+                        method = "xgbTree")
 
 # XGBoost testing.
 y1_hat <- predict(XGBoost, as.data.frame(testset)[-30])
