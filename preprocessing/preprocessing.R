@@ -3,6 +3,8 @@
 
 # This script passes the social relegation dataset through important data preprocessing steps.
 
+source('packages.R')
+
 set.seed(10)
 
 # Loading the data.
