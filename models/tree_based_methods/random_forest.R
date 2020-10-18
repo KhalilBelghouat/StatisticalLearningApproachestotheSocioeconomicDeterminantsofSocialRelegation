@@ -3,12 +3,14 @@
 
 # This script applies random forest to the preprocessed dataset.
 
+source('preprocessing.R')
+
 # Random forest training.
-random_forest <- train(y1 ~ ., data = trainset, trControl = trainControl(method = "cv", 
-                       number = 10,
-                       classProbs = TRUE), 
-                       metric = "Kappa",
-                       method = "rf")
+random_forest <- caret::train(y1 ~ ., data = trainset, trControl = trainControl(method = "cv", 
+                              number = 10,
+                              classProbs = TRUE), 
+                              metric = "Kappa",
+                              method = "rf")
 
 # Random forest training.
 y1_hat <- predict(random_forest, as.data.frame(testset)[-30])
