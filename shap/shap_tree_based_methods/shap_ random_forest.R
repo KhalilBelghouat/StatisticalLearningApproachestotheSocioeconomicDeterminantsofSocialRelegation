@@ -3,6 +3,9 @@
 
 # This script utilizes SHAP (SHapley Additive exPlanations) to explain the output of the random forest algorithm.
 
+source('preprocessing.R')
+source('random_forest.R')
+
 # Specifying the independent variable columns.
 features <- trainset[-30]
 
