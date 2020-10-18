@@ -3,12 +3,14 @@
 
 # This script applies the support vector machine method with radial basis kernel to the preprocessed dataset.
 
+source('preprocessing.R')
+
 # Support vector machine with radial basis kernel training.
-svm_rbf <- train(y1 ~ ., data = trainset, trControl = trainControl(method = "cv",
-                 number = 10,
-                 classProbs = TRUE), 
-                 metric = "Kappa",
-                 method = "svmRadial")
+svm_rbf <- caret::train(y1 ~ ., data = trainset, trControl = trainControl(method = "cv",
+                        number = 10,
+                        classProbs = TRUE), 
+                        metric = "Kappa",
+                        method = "svmRadial")
 
 # Support vector machine with radial basis kernel testing.
 y1_hat <- predict(svm_rbf, as.data.frame(testset)[-30])
