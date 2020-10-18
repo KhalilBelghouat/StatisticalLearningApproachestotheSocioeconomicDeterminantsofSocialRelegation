@@ -3,12 +3,14 @@
 
 # This script applies the support vector machine method with polynomial kernel to the preprocessed dataset.
 
+source('preprocessing.R')
+
 # Support vector machine with polynomial kernel training.
-svm_poly <- train(y1 ~ ., data = trainset, trControl = trainControl(method = "cv",
-                  number = 10,
-                  classProbs = TRUE), 
-                  metric = "Kappa",
-                  method = "svmPoly")
+svm_poly <- caret::train(y1 ~ ., data = trainset, trControl = trainControl(method = "cv",
+                         number = 10,
+                         classProbs = TRUE), 
+                         metric = "Kappa",
+                         method = "svmPoly")
 
 # Support vector machine with polynomial kernel testing.
 y1_hat <- predict(svm_poly, as.data.frame(testset)[-30])
