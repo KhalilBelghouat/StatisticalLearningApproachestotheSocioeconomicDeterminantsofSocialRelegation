@@ -3,6 +3,9 @@
 
 # This script utilizes SHAP (SHapley Additive exPlanations) to explain the output of the decision tree algorithm.
 
+source('preprocessing.R')
+source('decision_tree.R')
+
 # Specifying the independent variable columns.
 features <- trainset[-30]
 
