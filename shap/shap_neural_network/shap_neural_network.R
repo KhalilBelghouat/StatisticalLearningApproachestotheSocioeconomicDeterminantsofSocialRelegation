@@ -3,6 +3,9 @@
 
 # This script utilizes SHAP (SHapley Additive exPlanations) to explain the output of the neural network.
 
+source('preprocessing.R')
+source('neural_network.R')
+
 # Specifying the independent variable columns.
 features <- trainset[-30]
 
